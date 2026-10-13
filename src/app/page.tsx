@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { ArrowUpRight, BarChart3, Bell, Footprints, MapPin, ShieldCheck, Sparkles } from "lucide-react";
 
+const supportEmail = "rahulkumar27382@gmail.com";
+
 const features = [
   { icon: Footprints, title: "Your day, at a glance", text: "See steps, distance, calories, active minutes, and goal progress in one calm dashboard." },
   { icon: BarChart3, title: "Patterns that help", text: "Move from today to week and month views to understand your rhythm without noisy feeds." },
@@ -23,4 +25,4 @@ export default function Home() {
   </main>;
 }
 
-function Footer() { return <footer><div className="section-wrap footer-inner"><Link className="brand" href="/"><span className="brand-mark"><Footprints size={18} /></span><span>StepForge</span></Link><div className="footer-links"><Link href="/privacy">Privacy policy</Link><Link href="/support">Support</Link><Link href="/testing">Testing guide</Link><a href="mailto:support@stepforge.app">support@stepforge.app</a></div><span className="copyright">© 2026 StepForge</span></div></footer>; }
+function Footer() { return <footer><div className="section-wrap footer-inner"><Link className="brand" href="/"><span className="brand-mark"><Footprints size={18} /></span><span>StepForge</span></Link><div className="footer-links"><Link href="/privacy">Privacy policy</Link><Link href="/support">Support</Link><Link href="/testing">Testing guide</Link><a href={`mailto:${supportEmail}`}>{supportEmail}</a></div><span className="copyright">© 2026 StepForge</span></div></footer>; }
